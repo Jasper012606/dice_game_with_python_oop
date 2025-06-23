@@ -33,3 +33,6 @@ class Game(Dice):
                 self.player_scores[player_idx] += current_score
                 print("Your total score is:", self.player_scores[player_idx])
                 
+        max_score = max(self.player_scores)
+        winning_idx = self.player_scores.index(max_score)
+        print("Player number", winning_idx + 1, "is the winner with a score of:", max_score)
