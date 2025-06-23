@@ -14,7 +14,19 @@ class Game(Dice):
                 print("Your total score is:", self.player_scores[player_idx], "\n")
                 current_score = 0
         
-
+                while True:
+                    should_roll = input("Would you like to roll (y/n)? ")
+                    if should_roll.lower() != "y":
+                        break
+                    
+                    value = roll()
+                    if value == 1:
+                        print("You rolled a 1! Turn done!")
+                        current_score = 0
+                        break
+                    else:
+                        current_score += value
+                        print("You rolled a:", value)
 
 
                 
