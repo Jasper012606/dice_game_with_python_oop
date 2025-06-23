@@ -6,7 +6,6 @@ class NumberOfPlayers:
             if self.number_of_players.isdigit():
                 self.number_of_players = int(self.number_of_players)
                 if 2 <= self.number_of_players <= 4:
-                    print(f"Number of players: {self.number_of_players}")
                     return self.number_of_players
                 else:
                     print("Players must be between 2 and 4.")
