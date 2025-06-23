@@ -28,5 +28,8 @@ class Game(Dice):
                         current_score += value
                         print("You rolled a:", value)
 
+                    print("Your score is:", current_score)
 
+                self.player_scores[player_idx] += current_score
+                print("Your total score is:", self.player_scores[player_idx])
                 
