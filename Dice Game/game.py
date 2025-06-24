@@ -5,7 +5,7 @@ class Game(Dice):
     def __init__(self, number_of_players, max_score=50):
         self.number_of_players = number_of_players
         self.max_score = max_score
-        self.player_scores = [0 for number in range(self.number_of_players)]
+        self.player_scores = [0 for numbers in range(self.number_of_players)]
         
     def run(self, roll):
         while max(self.player_scores) < self.max_score:
@@ -36,5 +36,5 @@ class Game(Dice):
         max_score = max(self.player_scores)
         winning_idx = self.player_scores.index(max_score)
         print("Player number", winning_idx + 1, "is the winner with a score of:", max_score)
-        print("Game Over! Thanks for playing!")
+        print("Game's over! Thanks for playing!")
         exit()
